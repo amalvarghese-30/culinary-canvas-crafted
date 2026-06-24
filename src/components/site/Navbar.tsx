@@ -79,6 +79,7 @@ export function Navbar() {
           <div className="flex items-center gap-2">
             <a
               href="tel:+911234567890"
+              aria-label="Call +91 12345 67890"
               className="hidden sm:inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium text-foreground/90 ring-1 ring-border hover:bg-white/5 transition"
             >
               <Phone className="size-4" /> Call
@@ -167,6 +168,35 @@ export function Navbar() {
                   className="inline-flex flex-col items-center justify-center gap-1 rounded-xl bg-primary text-primary-foreground py-3 text-xs font-semibold"
                 >
                   <ShoppingBag className="size-4" /> Order
+                </Link>
+              </li>
+
+              <li className="pt-3 border-t border-border">
+                <Link
+                  to={user ? "/account" : "/auth"}
+                  onClick={() => setOpen(false)}
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg text-foreground/90 hover:bg-white/5"
+                >
+                  <User className="size-5 text-muted-foreground" />
+                  <span>{user ? "My Account" : "Sign In / Sign Up"}</span>
+                </Link>
+                {isStaff && (
+                  <Link
+                    to="/admin"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center gap-3 px-4 py-3 rounded-lg text-primary hover:bg-white/5 font-semibold"
+                  >
+                    <span className="grid place-items-center size-5 rounded bg-primary/15 text-primary text-[10px] font-bold">A</span>
+                    <span>Admin Dashboard</span>
+                  </Link>
+                )}
+                <Link
+                  to="/notifications"
+                  onClick={() => setOpen(false)}
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg text-foreground/90 hover:bg-white/5"
+                >
+                  <NotificationBell />
+                  <span>Notifications</span>
                 </Link>
               </li>
 

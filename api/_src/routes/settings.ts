@@ -9,13 +9,24 @@ export const settingsRoutes = Router();
 
 settingsRoutes.get("/public", async (_req, res) => {
   try {
-    let settings = await Settings.findOne({ isActive: true });
+    let settings = await Promise.race([
+      Settings.findOne({ isActive: true }),
+      new Promise<null>((_, reject) => setTimeout(() => reject(new Error("DB_TIMEOUT")), 4000)),
+    ]);
     if (!settings) {
       settings = await Settings.create({});
     }
     return ok(res, settings);
   } catch (err: any) {
-    return notFound(res, err.message);
+    const defaults = {
+      restaurantName: "Momo House",
+      phone: "911234567890",
+      phoneDisplay: "+91 12345 67890",
+      address: "12 Lake Road, Khan Market, New Delhi 110003",
+      hours: "Daily 11:00 AM – 11:30 PM",
+      socialLinks: { instagram: "", facebook: "" },
+    };
+    return ok(res, defaults, "Defaults served");
   }
 });
 

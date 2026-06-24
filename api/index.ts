@@ -108,10 +108,10 @@ let initPromise: Promise<void> | null = null;
 function ensureInit() {
   if (!initPromise) {
     initPromise = (async () => {
-      await connectDB();
-      await seedLoyaltyTiers();
-      await seedMenu();
-      await seedAdmin();
+      try { await connectDB(); } catch (err: any) { console.error("[api] DB connect failed:", err.message); }
+      try { await seedLoyaltyTiers(); } catch (err: any) { console.error("[api] seed loyalty failed:", err.message); }
+      try { await seedMenu(); } catch (err: any) { console.error("[api] seed menu failed:", err.message); }
+      try { await seedAdmin(); } catch (err: any) { console.error("[api] seed admin failed:", err.message); }
       console.log("[api] ready");
     })();
   }
@@ -124,8 +124,8 @@ app.use(async (_req, _res, next) => {
   try {
     await ensureInit();
     next();
-  } catch (err) {
-    next(err);
+  } catch {
+    next();
   }
 });
 

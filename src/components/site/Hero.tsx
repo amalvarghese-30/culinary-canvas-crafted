@@ -92,7 +92,7 @@ export function Hero() {
                 ))}
                 <span className="kbd">Today's Pick</span>
               </div>
-              <h3 className="font-display text-2xl mt-4">Tandoori Chicken Momos</h3>
+              <h2 className="font-display text-2xl mt-4">Tandoori Chicken Momos</h2>
               <p className="text-sm text-muted-foreground mt-2">
                 Yogurt-marinated, charred in the clay oven, finished with smoked butter.
               </p>

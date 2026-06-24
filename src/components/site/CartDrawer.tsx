@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { X, Minus, Plus, ShoppingBag } from "lucide-react";
 import { useCart } from "@/lib/cart-store";
@@ -7,18 +7,6 @@ export function CartDrawer() {
   const { items, isOpen, setOpen, setQty, remove, subtotal, count } = useCart();
   const sub = subtotal();
   const location = useLocation();
-  const [mounted, setMounted] = useState(false);
-  const closeTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
-
-  useEffect(() => {
-    if (isOpen) {
-      clearTimeout(closeTimer.current);
-      setMounted(true);
-    } else {
-      closeTimer.current = setTimeout(() => setMounted(false), 500);
-    }
-    return () => clearTimeout(closeTimer.current);
-  }, [isOpen]);
 
   // Close cart on route change
   useEffect(() => {
@@ -26,8 +14,6 @@ export function CartDrawer() {
   }, [location.pathname]);
 
   const itemCount = count();
-
-  if (!mounted) return null;
 
   return (
     <>
@@ -37,7 +23,7 @@ export function CartDrawer() {
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setOpen(false)}
-        aria-hidden
+        aria-hidden={!isOpen}
       />
 
       {/* Drawer — bottom sheet on mobile, side panel on desktop */}
