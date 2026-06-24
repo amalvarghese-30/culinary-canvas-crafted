@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "gallery": "Gallery",
+    "story": "Story",
+    "book": "Book",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Est. 2014 · Handmade Daily",
+    "title_1": "Crafted with fire.",
+    "title_2": "Steamed with love.",
+    "title_3": "Served fresh.",
+    "subtitle": "Twelve momo styles. Three soulful fillings. One obsession with freshness — folded by hand, the moment you order.",
+    "order_now": "Order Now",
+    "explore_menu": "Explore Menu"
+  },
+  "home": {
+    "hungry": "Hungry?",
+    "see_menu": "See the full menu",
+    "menu_desc": "12 styles · 3 fillings · all hand-folded. Browse, customize, and order in minutes.",
+    "explore_menu_btn": "Explore Menu"
+  },
+  "menu": {
+    "eyebrow": "The Menu",
+    "title": "Twelve Styles. Three Fillings.",
+    "subtitle": "Every momo is folded by hand and steamed to order. Pick a style, pick a filling — and we'll take it from there.",
+    "search": "Search the menu…"
+  },
+  "checkout": {
+    "title": "Almost there.",
+    "eyebrow": "Checkout",
+    "empty_cart": "Your cart is empty",
+    "browse_menu": "Browse menu",
+    "delivery": "Delivery",
+    "pickup": "Pickup",
+    "full_name": "Full name",
+    "phone": "Phone",
+    "address": "Address line",
+    "city": "City",
+    "pincode": "Pincode",
+    "notes": "Notes for the kitchen (optional)",
+    "order_summary": "Order summary",
+    "subtotal": "Subtotal",
+    "gst": "GST 5%",
+    "delivery_fee": "Delivery",
+    "free": "Free",
+    "total": "Total",
+    "promo_code": "Promo code",
+    "apply": "Apply",
+    "pay": "Pay",
+    "place_order": "Place order",
+    "placing_order": "Placing order…",
+    "rewards_balance": "Balance",
+    "rewards_value": "value",
+    "dine_in_badge": "Dine-in · scanned table",
+    "secure_payment_title": "Secure payment via Razorpay",
+    "secure_payment_desc": "UPI, cards, netbanking & wallets accepted."
+  },
+  "footer": {
+    "tagline": "Twelve momo styles, three fillings, one obsession — handmade, hill-station inspired, and steamed to order.",
+    "explore": "Explore",
+    "full_menu": "Full Menu",
+    "gallery": "Gallery",
+    "our_story": "Our Story",
+    "faq": "FAQ",
+    "visit": "Visit & Connect",
+    "copyright": "© {{year}} Momo House. Crafted with care.",
+    "made_in": "Made in India · Folded by hand"
+  },
+  "account": {
+    "title": "Your dashboard",
+    "eyebrow": "Account",
+    "sign_out": "Sign out",
+    "orders": "Orders",
+    "reservations": "Reservations",
+    "favorites": "Favorites",
+    "loyalty": "Loyalty",
+    "profile": "Profile",
+    "no_orders": "No orders yet.",
+    "no_favorites": "No favorites yet. Tap the heart on any dish.",
+    "no_reservations": "No reservations yet.",
+    "loyalty_balance": "Your balance",
+    "loyalty_earn": "Earn 1 point for every Rs.10 spent. Redeem soon.",
+    "loyalty_no_points": "No points earned yet — place an order to start."
+  },
+  "common": {
+    "loading": "Loading…"
+  }
+}

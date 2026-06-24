@@ -1,0 +1,1 @@
+REVOKE EXECUTE ON FUNCTION public.credit_loyalty_on_delivery() FROM PUBLIC, anon, authenticated;
