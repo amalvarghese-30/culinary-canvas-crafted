@@ -1,9 +1,9 @@
-import { createApp } from "./src/app";
-import { connectDB } from "./src/lib/db";
-import { LoyaltyTier } from "./src/models/LoyaltyTier";
-import { MenuCategory } from "./src/models/MenuCategory";
-import { MenuItem } from "./src/models/MenuItem";
-import { User } from "./src/models/User";
+import { createApp } from "./_src/app";
+import { connectDB } from "./_src/lib/db";
+import { LoyaltyTier } from "./_src/models/LoyaltyTier";
+import { MenuCategory } from "./_src/models/MenuCategory";
+import { MenuItem } from "./_src/models/MenuItem";
+import { User } from "./_src/models/User";
 import bcrypt from "bcryptjs";
 
 try { process.loadEnvFile?.("./.env"); } catch {}

@@ -12,7 +12,7 @@
     "declarationMap": true,
     "sourceMap": true,
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "./_src"
   },
-  "include": ["src"]
+  "include": ["_src", "index.ts"]
 }

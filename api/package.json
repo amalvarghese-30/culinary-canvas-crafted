@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npx tsx watch src/index.ts",
-    "start": "node --import tsx src/index.ts"
+    "dev": "npx tsx watch _src/index.ts",
+    "start": "node --import tsx _src/index.ts"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
