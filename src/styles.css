@@ -112,11 +112,11 @@
     color: var(--foreground);
   }
 
-  ::-webkit-scrollbar { width: 10px; height: 10px; }
-  ::-webkit-scrollbar-track { background: var(--background); }
-  ::-webkit-scrollbar-thumb {
-    background: color-mix(in oklab, var(--primary) 50%, var(--background));
-    border-radius: 999px;
+  /* Hide scrollbar — keep scroll functionality */
+  ::-webkit-scrollbar { display: none; }
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 }
 
